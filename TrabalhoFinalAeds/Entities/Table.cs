@@ -16,6 +16,11 @@ namespace TrabalhoFinalAeds.Entities {
             Clients = new List<Client>();
             TableCommand = new Command();
         }
+        public Table(int number, DateTime data, TableStatus status) : this(){
+            Number = number;
+            Data = data;
+            Status = status;
+        }
 
         public bool Reserve() {
             if (Status == TableStatus.Free) {
@@ -26,6 +31,9 @@ namespace TrabalhoFinalAeds.Entities {
         }
         public void AddClient(Client client) {
             Clients.Add(client);
+        }
+        public void AddConsumption(Item item) {
+            TableCommand.AddConsumption(item);
         }
 
         public override string ToString() {

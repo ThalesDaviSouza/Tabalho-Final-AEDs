@@ -1,5 +1,24 @@
 ﻿namespace TrabalhoFinalAeds.Entities {
     public class TesteRestaurante {
-        // Ainda irei testar o que foi feito até agora.
+        public static void Run() {
+            Restaurant BuchinhoCheio = new Restaurant("Buchinho Cheio", "Barker Street 221B");
+            Table t4 = new Table(4, DateTime.Now, Enums.TableStatus.Free);
+            t4.AddClient(new Client("Eduardo", "EduEmail.com"));
+            t4.AddClient(new Client("Eduardo2", "Edu2Email.com"));
+            t4.AddClient(new Client("Bongo", "Bongo.com"));
+            t4.AddConsumption(new Item("Fanta laranja", 4.5));
+            t4.AddConsumption(new Item("Pizza Gigante", 45.68));
+            t4.AddConsumption(new Item("Pudim", 17.8));
+            BuchinhoCheio.AddTable(t4);
+
+            Table t5 = new Table(5, DateTime.Now, Enums.TableStatus.Reserved);
+            t5.AddClient(new Client("Thales", "ThEmail.com"));
+            t5.AddConsumption(new Item("Vinho do Porto", 120.65));
+            t5.AddConsumption(new Item("Porçao de Peixes", 68.2));
+            t5.TableCommand.CloseCommand();
+            BuchinhoCheio.AddTable(t5);
+
+            Console.WriteLine(BuchinhoCheio);
+        }
     }
 }

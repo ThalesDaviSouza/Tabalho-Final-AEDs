@@ -1,0 +1,15 @@
+C:\Users\thale\source\repos\C#\TrabalhoFinalAeds\TrabalhoFinalAeds\obj\Debug\net6.0\TrabalhoFinalAeds.csproj.AssemblyReference.cache
+C:\Users\thale\source\repos\C#\TrabalhoFinalAeds\TrabalhoFinalAeds\obj\Debug\net6.0\TrabalhoFinalAeds.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thale\source\repos\C#\TrabalhoFinalAeds\TrabalhoFinalAeds\obj\Debug\net6.0\TrabalhoFinalAeds.AssemblyInfoInputs.cache
+C:\Users\thale\source\repos\C#\TrabalhoFinalAeds\TrabalhoFinalAeds\obj\Debug\net6.0\TrabalhoFinalAeds.AssemblyInfo.cs
+C:\Users\thale\source\repos\C#\TrabalhoFinalAeds\TrabalhoFinalAeds\obj\Debug\net6.0\TrabalhoFinalAeds.csproj.CoreCompileInputs.cache
+C:\Users\thale\source\repos\C#\TrabalhoFinalAeds\TrabalhoFinalAeds\bin\Debug\net6.0\TrabalhoFinalAeds.exe
+C:\Users\thale\source\repos\C#\TrabalhoFinalAeds\TrabalhoFinalAeds\bin\Debug\net6.0\TrabalhoFinalAeds.deps.json
+C:\Users\thale\source\repos\C#\TrabalhoFinalAeds\TrabalhoFinalAeds\bin\Debug\net6.0\TrabalhoFinalAeds.runtimeconfig.json
+C:\Users\thale\source\repos\C#\TrabalhoFinalAeds\TrabalhoFinalAeds\bin\Debug\net6.0\TrabalhoFinalAeds.dll
+C:\Users\thale\source\repos\C#\TrabalhoFinalAeds\TrabalhoFinalAeds\bin\Debug\net6.0\TrabalhoFinalAeds.pdb
+C:\Users\thale\source\repos\C#\TrabalhoFinalAeds\TrabalhoFinalAeds\obj\Debug\net6.0\TrabalhoFinalAeds.dll
+C:\Users\thale\source\repos\C#\TrabalhoFinalAeds\TrabalhoFinalAeds\obj\Debug\net6.0\refint\TrabalhoFinalAeds.dll
+C:\Users\thale\source\repos\C#\TrabalhoFinalAeds\TrabalhoFinalAeds\obj\Debug\net6.0\TrabalhoFinalAeds.pdb
+C:\Users\thale\source\repos\C#\TrabalhoFinalAeds\TrabalhoFinalAeds\obj\Debug\net6.0\TrabalhoFinalAeds.genruntimeconfig.cache
+C:\Users\thale\source\repos\C#\TrabalhoFinalAeds\TrabalhoFinalAeds\obj\Debug\net6.0\ref\TrabalhoFinalAeds.dll
