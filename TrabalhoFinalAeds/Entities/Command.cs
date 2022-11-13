@@ -15,7 +15,7 @@ namespace TrabalhoFinalAeds.Entities {
             Value = 0;
         }
         
-        public void AddConsumption(Item consumption) {
+        public virtual void AddConsumption(Item consumption) {
             Consumption.Add(consumption);
             Value += consumption.Value;
         }
@@ -37,18 +37,15 @@ namespace TrabalhoFinalAeds.Entities {
 
         public override string ToString() {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Command status: {Status}");
-            sb.AppendLine($"Consumption:");
-
             if(Consumption.Count > 0) {
                 foreach(Item i in Consumption) {
                     sb.AppendLine(i.ToString());
                 }
+                sb.AppendLine($"Tip: {CalculateTenPercent().ToString("F2")}");
+                sb.Append($"Total value: {(Value+CalculateTenPercent()).ToString("F2")}");
             }else {
                 sb.AppendLine("Nothing yet.");
             }
-            sb.AppendLine($"Tip: {CalculateTenPercent().ToString("F2")}");
-            sb.Append($"Total value: {(Value+CalculateTenPercent()).ToString("F2")}");
 
             return sb.ToString();
         }

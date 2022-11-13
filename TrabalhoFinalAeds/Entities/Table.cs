@@ -9,12 +9,14 @@ namespace TrabalhoFinalAeds.Entities {
         public DateTime Data { get; private set; }
         public TableStatus Status { get; private set; }
         public List<Client> Clients { get; private set; }
-        public Command TableCommand { get; private set; }
+        public FoodCommand Foods { get; private set; }
+        public DrinkCommand Drinks { get; private set; }
 
         public Table() {
             Status = TableStatus.Free;
             Clients = new List<Client>();
-            TableCommand = new Command();
+            Foods = new FoodCommand();
+            Drinks = new DrinkCommand();
         }
         public Table(int number, DateTime data, TableStatus status) : this(){
             Number = number;
@@ -29,11 +31,27 @@ namespace TrabalhoFinalAeds.Entities {
             }
             return false;
         }
+        public void CloseCommand() {
+            Foods.CloseCommand();
+            Drinks.CloseCommand();
+        }
+        public void OpenCommand() {
+            Foods.OpenCommand();
+            Drinks.OpenCommand();
+        }
         public void AddClient(Client client) {
             Clients.Add(client);
         }
         public void AddConsumption(Item item) {
-            TableCommand.AddConsumption(item);
+            if(item is FoodItem) {
+                Foods.AddConsumption(item);
+            }
+            else {
+                Drinks.AddConsumption(item);
+            }
+        }
+        public double TotalValue() {
+            return (Foods.Value + Foods.CalculateTenPercent()) + (Drinks.Value + Drinks.CalculateTenPercent());
         }
 
         public override string ToString() {
@@ -50,8 +68,12 @@ namespace TrabalhoFinalAeds.Entities {
                 sb.AppendLine("Nobody.");
             }
             sb.AppendLine($"Command:");
-            sb.Append($"{TableCommand}");
-
+            sb.AppendLine($"Status: {Foods.Status}");
+            sb.AppendLine($"Foods:");
+            sb.AppendLine($"{Foods}");
+            sb.AppendLine($"Drinks:");
+            sb.AppendLine($"{Drinks}");
+            sb.AppendLine($"Total command's value: R${TotalValue().ToString("F2")}");
             return sb.ToString();
         }
 
