@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 using TrabalhoFinalAeds.Entities.Enums;
@@ -46,7 +47,7 @@ namespace TrabalhoFinalAeds.Entities {
             if(item is FoodItem) {
                 Foods.AddConsumption(item);
             }
-            else {
+            else if(item is DrinkItem) {
                 Drinks.AddConsumption(item);
             }
         }
