@@ -1,4 +1,14 @@
-﻿namespace TrabalhoFinalAeds.Entities {
+﻿/* Trabalho Final de AEDs
+ * 
+ * Data: 13/11/2022
+ * 
+ * Integrantes do grupo: 
+ * - Thales Davi de Souza
+ * - Eduardo Santos Birchal
+ * 
+ */
+
+namespace TrabalhoFinalAeds.Entities {
     public class Client {
         public string? Name { get; private set; }
         public string? Email { get; private set; }

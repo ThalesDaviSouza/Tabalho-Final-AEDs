@@ -1,4 +1,14 @@
-﻿using System.Collections.Generic;
+﻿/* Trabalho Final de AEDs
+ * 
+ * Data: 13/11/2022
+ * 
+ * Integrantes do grupo: 
+ * - Thales Davi de Souza
+ * - Eduardo Santos Birchal
+ * 
+ */
+
+using System.Collections.Generic;
 using System.Text;
 
 using TrabalhoFinalAeds.Entities.Enums;
@@ -30,9 +40,6 @@ namespace TrabalhoFinalAeds.Entities {
         }
         public double CalculateTenPercent() {
             return (Value * 0.1);
-        }
-        public double SplitBill(double numberPersons) {
-            return Value / numberPersons;
         }
 
         public override string ToString() {

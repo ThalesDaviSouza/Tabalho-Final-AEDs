@@ -1,4 +1,14 @@
-﻿using System;
+﻿/* Trabalho Final de AEDs
+ * 
+ * Data: 13/11/2022
+ * 
+ * Integrantes do grupo: 
+ * - Thales Davi de Souza
+ * - Eduardo Santos Birchal
+ * 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -25,12 +35,12 @@ namespace TrabalhoFinalAeds.Entities {
             Status = status;
         }
 
-        public bool Reserve() {
-            if (Status == TableStatus.Free) {
-                Status = TableStatus.Reserved;
-                return true;
-            }
-            return false;
+        public void UpdateDate(DateTime date) {
+            Data = date;
+        }
+
+        public void Reserve() {
+            Status = (Status == TableStatus.Free) ? TableStatus.Reserved : TableStatus.Free;
         }
         public void CloseCommand() {
             Foods.CloseCommand();
@@ -55,9 +65,13 @@ namespace TrabalhoFinalAeds.Entities {
             return (Foods.Value + Foods.CalculateTenPercent()) + (Drinks.Value + Drinks.CalculateTenPercent());
         }
 
+        public double SplitTotal() {
+            return TotalValue() / Clients.Count;
+        }
+
         public override string ToString() {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Table #{Number} ---- {Data.ToString("dd/MM/yyyy")}");
+            sb.AppendLine($"Table #{Number} ---- {Data.ToString("dd/MM/yyyy HH:mm")}");
             sb.AppendLine($"Status: {Status}");
             sb.AppendLine($"Clients:");
             if (Clients.Count > 0) {
